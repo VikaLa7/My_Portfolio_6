@@ -8,7 +8,9 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint --ext .svelte,.ts src",
-    "format": "prettier --write \"src/**/*.svelte\" \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.svelte\" \"src/**/*.ts\"",
+    "precommit": "lint-staged",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",
@@ -18,6 +20,8 @@
     "@tsconfig/svelte": "^5.0.0",
     "@types/cookie": "^0.5.1",
     "eslint": "^8.45.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "svelte": "^3.54.0",
     "svelte-check": "^3.0.1",
